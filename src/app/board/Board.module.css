@@ -1,0 +1,36 @@
+.board {
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: repeat(8, 1fr);
+    aspect-ratio: square;
+    height: fit-content;
+    width: fit-content;
+}
+
+.square {
+    position: relative;
+    height: 5rem;
+    width: 5rem;
+    font-size: 4rem;
+    aspect-ratio: square;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.availableSquare::after {
+    content: "";
+    position: absolute;
+    width: 3rem; 
+    height: 3rem;
+    background-color: var(--available);
+    border-radius: 50%;
+}
+
+
+.darkSquare {
+    background-color: var(--secondary);
+}
+
+.lightSquare {
+    background-color: var(--primary);
+}
