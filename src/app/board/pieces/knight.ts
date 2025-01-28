@@ -1,10 +1,4 @@
-import {
-  BOARD_LENGTH,
-  BoardModel,
-  Piece,
-  Players,
-  Position,
-} from "../Board.lib"
+import { BOARD_LENGTH, Piece, Players, Position } from "../Board.lib"
 import { BoardConfiguration } from "../configurations/configurations"
 
 export class Knight extends Piece {
