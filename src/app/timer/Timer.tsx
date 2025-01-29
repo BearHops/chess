@@ -1,7 +1,6 @@
 "use client"
 
-import { forwardRef, useEffect, useImperativeHandle, useRef, useState } from 'react'
-import styles from './Timer.module.css'
+import { forwardRef, useImperativeHandle, useRef, useState } from 'react'
 import { Time } from './Timer.lib'
 
 export const Timer = forwardRef(function Timer({...props }, ref) {

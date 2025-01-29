@@ -59,7 +59,7 @@ export class Piece {
   }
 
   getPossibleMoves(board: BoardConfiguration, position: Position) {
-    console.debug("get possible moves must be implemented")
+    console.debug("get possible moves must be implemented", board, position)
     return [] as Array<Position>
   }
 }

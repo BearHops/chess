@@ -1,6 +1,6 @@
 import styles from "./Board.module.css"
 import { BOARD_LENGTH, getSquareClass, movePiece, Piece, Players, Position } from "./Board.lib"
-import { useEffect, useState } from "react"
+import { useState } from "react"
 import { BoardConfiguration, CLASSIC } from "./configurations/configurations"
 
 export function Board() {
@@ -16,7 +16,7 @@ export function Board() {
   }
   function removeSquareHighlights() {
     const squares = Array.from(document.getElementsByClassName(styles.availableSquare))
-    for (let square of squares) {
+    for (const square of squares) {
       square.classList.remove(styles.availableSquare)
     }
   }
@@ -29,7 +29,7 @@ export function Board() {
       setSelectedPiecePosition({ x, y })
 
       const availableMoves = piece.getPossibleMoves(board, {x,y})
-      for (let move of availableMoves) {
+      for (const move of availableMoves) {
         highlightSquare(move)
       }
 
